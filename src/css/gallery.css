@@ -1,0 +1,31 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-item {
+  flex-basis: calc(33.333% - 16px); /* Для трьох зображень в рядок */
+  box-sizing: border-box;
+}
+
+.gallery-link {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery-link:hover .gallery-image {
+  transform: scale(1.05);
+}
